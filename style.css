@@ -1,80 +1,147 @@
-body {
-    background-color: rgba(0, 0, 0, 0.644);
-    font-family: 'Arial', sans-serif;
+
+*{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    background-color: aqua;
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-
-nav a {
-    background-color: #961717;
-    padding: 15px 25px;
-    border: #ffffff;
-    object-fit: cover;
-}
-
-nav div {
-display: flex;
-align-items:center;
-}
-
-h1 {
-    color: #ffffff;
-    text-align: center
-}
-
-h2{
-    color: #ffffff;
-    padding: 20px;
-}
-
-p1{
-    color: #ffffff;
-    padding: 20px;
-}
-
-li{
-    color: #ffffff;
-}
-
-
-header {
-    background-color: #2d00f8;
-    color: rgb(62, 255, 130);
-    text-align: center;
-    padding: 20px;
-}
-
-ul {
-    list-style:armenian
-    padding 20px;
-}
-
-footer {
-    background-color: aqua;
-    color: #000000;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
+.wrapper {
     width: 100%;
+    position: absolute;
+    z-index: 1;
 }
 
-#profile-picture {
-padding: 20px;
+.wrapper ul{
+    height: 50px;
+    display: flex;
+    justify-content: center;
 }
 
-#profile-picture img {
-    border-radius:10%; 
-    width: 225px; 
-    height: 225px; 
-    object-fit: cover;
+.wrapper ul li{
+    display: inline-block;
+    padding: 40px 15px;
+
+}
+.wrapper ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 5px 10px;
+
 }
 
+.wrapper ul li a:hover{
+    background: #fff ;
+    color: #000;
+}
+/* 
+.h2k {
+    display: flex;
+    justify-content: center;
+    scale: 20%;
+} */
+
+.wrapper h2{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    margin-top: 15%;
+    margin-bottom: 15px;
+
+}
+
+.wrapper p{
+    text-align: center;
+    font-size: 18px;
+    width: 35%;
+    margin: auto;
+    color: #ddd;
+    line-height: 1.7;
+}
+
+.objects{
+    background: linear-gradient(to right, #159957, #155799);
+    width: 100%;
+    height: 100vh;
+}
+
+.box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.box li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background: rgba(255,255,255, 0.2);
+    animation: animate 20s linear infinite;
+    bottom: -150px;
+    border-radius: 50%;
+}
+
+.box li:nth-child(1){
+    left:86%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+
+}
+
+.box li:nth-child(2){
+    left:12%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 1.5s;
+    animation-duration: 10s;
+}
+
+.box li:nth-child(3){
+    left:70%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 5.5s;
+}
+
+.box li:nth-child(4){
+    left: 45%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+
+.box li:nth-child(5){
+    left:65%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 0s;
+}
+
+.box li:nth-child(6){
+    left:15%;
+    width: 110px;
+    height: 100px;
+    animation-delay: 3.5s;
+    animation-duration: 10s;
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(0) scale(0);
+    }
+    100%{
+        transform: translateY(-800px) scale(2);
+        opacity: 0;
+    }
+}
